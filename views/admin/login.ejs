@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><% title %></title>
+  <% include include/admin_js_css.ejs %>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="index"><b>管理</b><i class="iconfont icon-logo"></i></a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">登录并管理企力官网</p>
+
+    <!--<form id="form" action="/admin/users/findUser" method="post">-->
+    <form id="form">
+      <div class="form-group has-feedback">
+        <input type="email" name="email" class="form-control" placeholder="邮箱">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="pwd" class="form-control" placeholder="密码">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label>
+              <input type="checkbox"> 记住密码
+            </label>
+          </div>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <a onclick="submit()" class="btn btn-primary btn-block btn-flat">登录</a>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
+
+
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+  function submit(){
+    $.ajax({
+      type:"GET",
+      url:"/admin/users/findUser",
+      data:$("#form").serialize(),
+      success:function(data){
+        console.log(data);
+      }
+    })
+  }
+</script>
+</body>
+</html>
