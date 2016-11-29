@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% include include/js_css_core %>
+  </head>
+  <body>
+  <% include include/menu.ejs%>
+  <div class="innerpageContainer">
+    <div class="pp_context">
+      <p class="pp_title">选择最适合您的方案</p>
+      <p class="pp_info">升级账号，享受更多高效工作体验</p>
+      <div class="pp_container">
+        <div class="pp_item">
+          <h2>基础版</h2>
+          <p class="pp_h2_info">面对小微团队或个人（限10人以下）</p>
+          <div class="pp_num">¥0<span>/人/年</span></div>
+          <a class="btn btn-lg btn-primary btn-sm">免费注册</a>
+          <div class="pp_list">
+            <p class="pp_i">用户管理</p>
+            <p class="pp_i">任务管理<em>(限制在三层级内)</em></p>
+            <p class="pp_i pp_i_but">协助任务<em>(企业之间协助)</em></p>
+            <p class="pp_i pp_i_but">任务统计</p>
+            <p class="pp_i_no">套餐内短信量<em>5条/每月</em></p>
+            <p class="pp_i_no">套餐内邮件量<em>5封/每月</em></p>
+            <p class="pp_i_no">附件上传量<em>100M/每月</em></p>
+          </div>
+        </div>
+        <div class="pp_item superFlag">
+          <h2>企业版</h2>
+          <p class="pp_h2_info">面对中小团队（限10人以上）</p>
+          <div class="pp_num">¥299<span>/人/年</span></div>
+          <a class="btn btn-lg btn-primary btn-sm">立即购买</a>
+          <div class="pp_list">
+            <p class="pp_i">用户管理</p>
+            <p class="pp_i">任务管理</p>
+            <p class="pp_i">协助任务<em>(企业之间协助)</em></p>
+            <p class="pp_i">任务统计</p>
+            <p class="pp_i_no">套餐内短信量<em>100条/每月</em></p>
+            <p class="pp_i_no">套餐内邮件量<em>100封/每月</em></p>
+            <p class="pp_i_no">附件上传量<em>1G/每月</em></p>
+          </div>
+        </div>
+        <div class="pp_item">
+          <h2>私有部署</h2>
+          <p class="pp_h2_info">面对大型组织（100人以上）</p>
+          <div class="pp_num">联系我们</div>
+          <a class="btn btn-lg btn-primary btn-sm">联系客户顾问</a>
+          <div class="pp_list">
+            <p class="pp_i">用户管理</p>
+            <p class="pp_i">任务管理</p>
+            <p class="pp_i">协助任务<em>(企业之间协助)</em></p>
+            <p class="pp_i">任务统计</p>
+            <p class="pp_i_no blue">套餐内短信量<em>私人定制</em></p>
+            <p class="pp_i_no blue">套餐内邮件量<em>私人定制</em></p>
+            <p class="pp_i_no blue">附件上传量<em>私人定制</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% include include/footer.ejs%>
+  </body>
+</html>

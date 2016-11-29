@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% include include/js_css_core %>
+  </head>
+  <body>
+  <div class="canvasbg" id="canvasbg">
+    <div style="display: none">
+      <video id="bgVideo"
+             poster="/images/index/5636a92ad0492_1024.jpg" autoplay="true" loop="true" autobuffer controls>
+        <source src="/images/index/5356a9178deec.mov">
+      </video>
+    </div>
+    <canvas id="background"></canvas>
+    <div class="flagText">
+      <img src="/images/index/name.png">
+      <p>企业级项目计划、执行、追踪、考核管理平台  协作任务用企力，企业协助更高效  内部任务用企力，让任务必达，任务进度清晰掌握</p>
+      <a href="http://121.40.125.30:8899/login.html" class="btn btn-info btn-lg">开始体验</a>
+    </div>
+  </div>
+  <% include include/menu.ejs%>
+  <div class="model piBox">
+    <div class="pi">
+      <div class="pi_icon"><i class="iconfont icon-anquan"></i></div>
+      <p class="pi_name">安全</p>
+      <p class="pi_info">2015年起，百万级企业的信赖</p>
+    </div>
+    <div class="pi">
+      <div class="pi_icon"><i class="iconfont icon-free"></i></div>
+      <p class="pi_name">免费</p>
+      <p class="pi_info">2016年起，不限应用不限人数，不限时间</p>
+    </div>
+    <div class="pi">
+      <div class="pi_icon"><i class="iconfont icon-gaoxiao"></i></div>
+      <p class="pi_name">高效</p>
+      <p class="pi_info">从使用企力开始</p>
+    </div>
+  </div>
+  <div class="model">
+    <div class="pt_text"><span>专业管理应用   承载企业经营管理全领域业务-为您提供了协作的一切</span></div>
+    <p class="pt_info">为企业人力资源、行政、财务、生产研发、销售、服务各经营管理领域提供专业应用，功能强大，有促进效率及业绩提升</p>
+  </div>
+  <div class="model">
+    <div class="pl">
+      <div class="pl_item">
+        <i class="iconfont icon-renwu"></i>
+        <p>任务管理</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-xiangmuguanli"></i>
+        <p>项目管理</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-tongxunlu"></i>
+        <p>通讯录</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-jixiaoguanli"></i>
+        <p>绩效管理</p>
+      </div>
+    </div>
+    <div class="pl">
+      <div class="pl_item">
+        <i class="iconfont icon-shenpiguanli"></i>
+        <p>审批管理</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-crm"></i>
+        <p>CRM</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-kaoqinguanli"></i>
+        <p>考勤管理</p>
+      </div>
+      <div class="pl_item">
+        <i class="iconfont icon-xuexiguanli"></i>
+        <p>学习管理</p>
+      </div>
+    </div>
+    <div class="pl_btn_box">
+      <a href="production" class="pl_btn">查看详细功能介绍</a>
+    </div>
+  </div>
+  <div class="model">
+    <div class="pt_text"><span>更低的投入 更高的回报 让企力便利惠及所有企业</span></div>
+  </div>
+  <div class="model adv">
+    <img src="/images/index/a1.jpg">
+  </div>
+  <div class="model">
+    <div class="pt_text"><span>跨企业协同平台</span></div>
+  </div>
+  <div class="model adv">
+    <img src="/images/index/a2.jpg">
+  </div>
+  <div class="model">
+    <div class="pt_text"><span>已经被应用于超过十个行业的逾一百万项目中</span></div>
+  </div>
+  <div class="model adv">
+    <img src="/images/index/a3.jpg">
+  </div>
+  <% include include/footer.ejs%>
+  <script>
+    $(function(){
+      $("#canvasbg").drawBackground();
+      $(window).scroll(function(e){
+        if($("body").scrollTop() > 300){
+          $("#nav").addClass("whiteFixed")
+        }else{
+          $("#nav").removeClass("whiteFixed")
+        }
+      })
+//      $(window).resize(function(){
+//        $("#canvasbg").drawBackground();
+//      })
+    })
+  </script>
+  </body>
+</html>

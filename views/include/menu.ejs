@@ -1,0 +1,32 @@
+    <% if (flag == "index"){%>
+    <div id="nav" class="nav">
+    <%}else{%>
+    <div id="nav" class="nav whiteFixed">
+    <%}%>
+    <a class="logo" href="index">
+        <!--<img src="../static/images/index/logo_1.png">-->
+    </a>
+    <ul class="leftNav">
+        <li>
+            <a href="index" class="navItem <% if(flag == "index"){%>active<%}%>">首页</a>
+        </li>
+        <li>
+            <a href="production" class="navItem <% if(flag == "production"){%>active<%}%>">产品</a>
+        </li>
+        <li>
+            <a href="price" class="navItem <% if(flag == "price"){%>active<%}%>">价格</a>
+        </li>
+        <li>
+            <a href="case" class="navItem <% if(flag == "case"){%>active<%}%>">案例</a>
+        </li>
+        <li>
+            <a href="about" class="navItem <% if(flag == "about"){%>active<%}%>">联系我们</a>
+        </li>
+        <li>
+            <a href="http://121.40.125.30:8899/login.html" class="navBtn">登录</a>
+        </li>
+        <li>
+            <a href="http://121.40.125.30:8899//user/register.html" class="navBtn">注册</a>
+        </li>
+    </ul>
+</div>
