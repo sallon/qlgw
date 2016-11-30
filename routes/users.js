@@ -18,5 +18,8 @@ router.get('/findAll', function(req, res, next) {
   userDao.findAll(req, res, next);
   // res.send("sallon")
 });
+router.get('/index',function(req,res,next){
+  res.render('admin/index',{title:"官网管理"})
+})
 
 module.exports = router;

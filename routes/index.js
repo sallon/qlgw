@@ -19,7 +19,13 @@ router.get('/price',function(req,res,next){
 })
 
 router.get('/production',function(req,res,next){
-  res.render('production',{title: '企力 | 您手边的办公利器 | 价格',isindex:false,flag:"production"})
+  res.render('production',{title: '企力 | 您手边的办公利器 | 产品',isindex:false,flag:"production"})
+})
+router.get('/case',function(req,res,next){
+  res.render('case',{title: '企力 | 您手边的办公利器 | 案例',isindex:false,flag:"case"})
+})
+router.get('/stemp',function(req,res,next){
+  res.render('stemp',{title: '企力 | 您手边的办公利器 | 服务步骤',isindex:false,flag:""})
 })
 
 module.exports = router;

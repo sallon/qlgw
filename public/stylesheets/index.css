@@ -117,7 +117,7 @@ a:hover, a:active, a:focus { text-decoration: none; }
 
 .innerpageContainer { padding-top: 70px; }
 
-.innerpageContainer .aboutImg, .innerpageContainer .productImg { min-width: 1200px; height: 398px; background-image: url("../images/index/about.jpg"); background-position: center; margin-bottom: 30px; }
+.innerpageContainer .aboutImg, .innerpageContainer .productImg, .innerpageContainer .caseImg { min-width: 1200px; height: 398px; background-image: url("../images/index/about.jpg"); background-position: center; margin-bottom: 30px; }
 
 .innerpageContainer .about_c { max-width: 1200px; margin: 0 auto; margin-bottom: 50px; }
 
@@ -179,6 +179,8 @@ a:hover, a:active, a:focus { text-decoration: none; }
 
 .innerpageContainer .productImg { background-image: url("../images/product/top.jpg"); }
 
+.innerpageContainer .caseImg { background-image: url("../images/case/case.jpg"); }
+
 .sec_nav { clear: both; overflow: hidden; max-width: 1200px; margin: 30px auto; text-align: center; }
 
 .sec_nav .sec_menu { display: inline-block; list-style: none; }
@@ -220,3 +222,11 @@ a:hover, a:active, a:focus { text-decoration: none; }
 .line_model .line_h .right_text .icons .r_i .iconfont { font-size: 50px; color: #999; }
 
 .line_model .line_h .right_text .icons .r_i p { font-size: 14px; color: #333; line-height: 2; }
+
+.line_model h2 { text-align: center; line-height: 2; font-size: 30px; color: #2f97de; font-weight: normal; }
+
+.line_model h3 { text-align: center; font-weight: normal; color: #999; font-size: 20px; }
+
+.line_model .picText { clear: both; overflow: hidden; line-height: 2.5; text-indent: 2em; color: #999; }
+
+.line_model .picText img { float: left; border: 1px solid #ddd; width: 400px; margin-right: 40px; }

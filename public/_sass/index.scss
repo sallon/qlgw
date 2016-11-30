@@ -518,6 +518,10 @@ a{
   @extend .aboutImg;
   background-image: url("../images/product/top.jpg");
 }
+.innerpageContainer .caseImg{
+  @extend .aboutImg;
+  background-image: url("../images/case/case.jpg");
+}
 .sec_nav{
   clear: both;
   overflow: hidden;
@@ -620,5 +624,32 @@ a{
         }
       }
     }
+  }
+  h2{
+    text-align: center;
+    line-height: 2;
+    font-size: 30px;
+    color: #2f97de;
+    font-weight: normal;
+  }
+  h3{
+    text-align: center;
+    //line-height: 2;
+    font-weight: normal;
+    color: #999;
+    font-size: 20px;
+  }
+  .picText{
+    clear: both;
+    overflow: hidden;
+    img{
+      float: left;
+      border: 1px solid #ddd;
+      width: 400px;
+      margin-right: 40px;
+    }
+    line-height: 2.5;
+    text-indent: 2em;
+    color: #999;
   }
 }

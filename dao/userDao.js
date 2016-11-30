@@ -49,7 +49,7 @@ module.exports = {
             var param = req.query || req.params;
             connection.query($sql.queryByEmail, [param.email, param.pwd], function(err, result) {
                 // 以json形式，把操作结果返回给前台页面
-                verifyUser(res, result);
+                verifyUser(res, result,param.pwd);
                 // 释放连接
                 connection.release();
             });
@@ -70,6 +70,7 @@ module.exports = {
 };
 
 var verifyUser = function(res,result,pwd){
+    console.log(result,pwd)
     if(result.length == 0 || result.length > 1){
         result = false;
     }
