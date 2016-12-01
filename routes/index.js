@@ -25,13 +25,13 @@ router.get('/case',function(req,res,next){
   res.render('case',{title: '企力 | 您手边的办公利器 | 案例',isindex:false,flag:"case"})
 })
 router.get('/stemp',function(req,res,next){
-  res.render('stemp',{title: '企力 | 您手边的办公利器 | 服务步骤',isindex:false,flag:""})
+  res.render('stemp',{title: '企力 | 您手边的办公利器 | 服务流程',isindex:false,flag:""})
 })
 router.get('/better',function(req,res,next){
   res.render('better',{title: '企力 | 您手边的办公利器 | 产品优势',isindex:false,flag:""})
 })
 router.get('/layer',function(req,res,next){
-  res.render('layer',{title: '企力 | 您手边的办公利器 | 服务协议',isindex:false,flag:""})
+  res.render('layer',{title: '企力 | 您手边的办公利器 | 隐私条款',isindex:false,flag:""})
 })
 router.get('/help',function(req,res,next){
   res.render('help',{title: '企力 | 您手边的办公利器 | 技术支持',isindex:false,flag:""})
