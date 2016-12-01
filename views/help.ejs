@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% include include/js_css_core %>
+    <style>
+      .line_model .line_h img{
+        /*height: 200px;*/
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+  <% include include/menu.ejs%>
+  <div class="innerpageContainer">
+    <div class="helpImg"></div>
+    <div class="topText">
+      <h2>高效技术支持，保障系统稳定运行</h2>
+      <p>系统的稳定运行是客户体验最核心的关键问题，企力技术支持团队时刻待命，全天候监控系统运转情况，并随时准备为您解决使用中遇到的任何技术问题。技术故障极速处理，从接到故障起，最快2小时内响应、24小时内处理完毕，若问题除涉及技术，还牵扯业务流程及功能设计，则除技术支持外还将有专业业务分析师为您解答业务流程问题，处理您遇到的各种困难和麻烦，有了企力高效的技术支撑团队服务，您的企业业务将再无后顾之忧。</p>
+      <p class="text-right">技术支持热线：<span style="color: #2c99e0">021-55215180</span></p>
+      <p class="text-right">咨询时间：<span style="color: #666;">周一至周五9：30</span></p>
+    </div>
+    <div class=" hasBg">
+      <div class="line_model">
+        <div class="line_h">
+          <div class="line_text">
+            <p class="l_title">支持1</p>
+            <p class="l_info">功能性问题，不影响系统功能使用，因操作体验或功能上的不便利或无法满足而引发的需求问题</p>
+            <p><span style="color: #2c99e0">响应时间：</span>2小时内回复<br>
+              <span style="color: #2c99e0">解决时间：</span>24小时内解决</p>
+          </div>
+        </div>
+        <div class="line_h">
+          <img src="/images/help/1.png">
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="line_model">
+        <div class="line_h">
+          <img src="/images/help/2.jpg">
+        </div>
+        <div class="line_h">
+          <div class="line_text">
+            <p class="l_title">支持2</p>
+            <p class="l_info">由于系统数据丢失或临时性错误导致非核心流程功能无法正常使用的问题，例如搜索结果显示有误，特定已办记录查看问题等</p>
+            <p><span style="color: #2c99e0">响应时间：</span>4小时内回复<br>
+              <span style="color: #2c99e0">解决时间：</span>48小时内解决</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" hasBg">
+      <div class="line_model">
+        <div class="line_h">
+          <div class="line_text">
+            <p class="l_title">支持3</p>
+            <p class="l_info">功能需求，不影响系统功能使用，因操作体验或功能上的不便利或无法满足而引起的需求问题</p>
+            <p><span style="color: #2c99e0">响应时间：</span>2周内响应<br>
+              <span style="color: #2c99e0">解决时间：</span>通过电话或者邮件沟通，根据具体产品计划和市场调研结果处理以邮件或电话方式沟通</p>
+          </div>
+        </div>
+        <div class="line_h">
+          <img src="/images/help/3.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <div class="line_model">
+        <div class="line_h">
+          <img src="/images/help/4.jpg">
+        </div>
+        <div class="line_h">
+          <div class="line_text">
+            <p class="l_title">支持4</p>
+            <p class="l_info">一般问题，即非系统性故障带来的问题或非核心功能出错等，例如
+              <span style="color: #666;">：邀请同事或者好友邮件错误等。</span>
+            </p>
+            <p><span style="color: #2c99e0">响应时间：</span>联系当日回复<br>
+              <span style="color: #2c99e0">解决时间：</span>拨打客服电话沟通，或远程协助操作处理</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <% include include/footer.ejs%>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <% include include/js_css_core %>
+    <style>
+      .line_model .line_h img{
+        /*height: 200px;*/
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+  <% include include/menu.ejs%>
+  <div class="innerpageContainer">
+    <div class="layerImg"></div>
+    <div class="line_textInfo">
+      <p>欢迎使用KeyPowerPlus这是一款面向企业和团队用户的在线协同软件，该软件由上海恃有信息科技有限公司（以下简称“恃有”）提供，为用户实现基于云计算的团队协同和企业协作互联网服务。
+      <p>恃有认可并重视用户的隐私。因此，恃有致力于确保用户了解其个人信息的使用方式，并且保证这些信息的安全。此隐私策略适用于KeyPowerPlus通过显示此隐私策略的网站、产品和服务收集的信息。此隐私策略适用于恃有当前提供的所有KeyPowerPlus产品和服务。
+      <p>除非此隐私策略第 2 节、第 6 节、第 7 节和第 16 节另有规定，否则未经您同意， 恃有不会与第三方共享您的任何与个人、团队和项目有关的信息。
+      <p>访问KeyPowerPlus的网站，或者使用或购买KeyPowerPlus提供的产品和服务，即表示您接受此隐私策略所述惯例，并同意KeyPowerPlus按照此隐私策略所述方式使用您的信息。</p>
+      <p class="title">1.KeyPowerPlus收集的信息</p>
+      <p>KeyPowerPlus可能向您收集有关您的身份、您在KeyPowerPlus上创建/加入的团队信息，以及您对KeyPowerPlus产品的个人 喜好方面的信息。我们通常可能收集的个人信息包括：姓名、电子邮件地址、电话号码、IP 地址；团队信息包括：公司/团队名称、Logo（或商标、企业标识）、邮箱、公司/团队通讯地址、电话号码、服务使用状态的相关信息，以及您在购买过程中可能会涉及到的帐户信息。
+      <p>KeyPowerPlus可能会采用多种不同方式来接收和收集您的个人信息。这些方式可能包括：</p>
+      <p class="smTitle">·来自您的信件</p>
+      <p>您给我们发送电子邮件或写信时，可能会在邮件中提供您的公司/团队信息、您的姓名、联系详细信息以及其他个人信息。</p>
+      <p class="smTitle">·用户支持
+      <p>您在打电话或发电子邮件给我们请求产品方面的技术帮助或索取有关我们产品的信息时，可能向我们提供企业/团队和个人信息。
+      <p class="smTitle">  ·产品注册
+      <p>注册KeyPowerPlus产品时，系统会要求您提供信息，以便我们将您记录为KeyPowerPlus产品的所有者，从而有助于我们为您提供服务和信息。
+      <p class="smTitle">·购买
+      <p>如果您希望通过我们的在线支付系统订购KeyPowerPlus产品，我们将需要足够的信息才能完成您的订购， 这些信息包括您企业/团队的银行账户信息或个人的信用卡信息
+      <p class="smTitle">·简历
+      <p>您为应聘KeyPowerPlus工作岗位和/或为此提交简历时，我们将获得您的个人信息，但我们只会将这些信息用于评估您是否有能力成为KeyPowerPlus的员工。
+      <p class="title">2.KeyPowerPlus收集信息的用途</p>
+      <p>KeyPowerPlus可能将您的个人信息用于以下用途：</p>
+      <p class="smTitle">·产品注册
+      <p>您注册时所提供的信息将用于创建您的KeyPowerPlus团队和项目，并且在您联系KeyPowerPlus用户服务部门时， 这些信息还将协助KeyPowerPlus为您提供支持。KeyPowerPlus还将使用这些信息来通知您有关您可能感兴趣的任何升级、新产品、促销或其他信息。
+      <p class="smTitle">·用户支持
+      <p>KeyPowerPlus可能将产品使用中收集的信息用于：定期验证您对产品的使用权利； 向您发送新产品/新功能升级的通知前，确认您是否正在使用该产品/功能的较早版本或者是否会对您使用KeyPowerPlus有所帮助； 以及，从KeyPowerPluse接收您请求获取的产品内部消息。
+      <p class="smTitle">·产品注册
+      <p>如果您通过KeyPowerPlus的在线支付系统购买产品，KeyPowerPlus将使用您的信息来处理付款并将产品购买信息发送给您。
+      <p class="smTitle">·购买
+      <p>我们可能会使用您提供给我们的信息进行内部统计和分析，从而评估并增强您对KeyPowerPlus网站的体验， 包括通过识别您的喜好和购买意向，进行营销以及与运营和开发相关的活动。
+      <p class="smTitle">·简历
+      <p>您为应聘KeyPowerPlus工作岗位和/或为此提交简历时，我们将获得您的个人信息，但我们只会将这些信息用于评估您是否有能力成为KeyPowerPlus的员工。
+      <p class="title">3. 自动收集的信息</p>
+      <p>无论何时，只要您通过KeyPowerPlus进入我们的网站或访问任何在线信息，我们的 Web 服务器就会自动收集和汇总有关您的访问的信息 （以下简称“自动信息”）。自动信息可能包括相关网站的 URL
+      或域、浏览器类型、操作系统、您所访问的页面以及访问日期和时间。
+      <p class="title">4. 用户文件</p>
+      <p>KeyPowerPlus允许您存储、发送、接收、编辑、同步、共享或者以其他方式组织或管理文件和文件夹 （包括这些文件夹中存储的任何信息或数据）（以下统称“用户文件”）。 我们可能获得您在KeyPowerPlus上储存的所有用户文件的大小，因为我们需要了解您对KeyPowerPlus的实际使用情况， 但我们绝不会获取、储存、共享您的任何用户文件。</p>
+      <p class="title">5. 与第三方共享信息</p>
+      <p>除非第 5 节、第 6 节另有特别规定，否则未经您同意，KeyPowerPlus不会与第三方共享任何个人信息（例如，通过登录您的用户帐户并选择某选项）。</p>
+      <p class="smTitle">·内部运营
+      <p>我们可能与独立审计师共享您向我们提供的信息，实现与我们的内部业务运营相关的收入审计目的，前提是此类审计公司必须遵守此隐私策略。
+      <p class="smTitle">  ·服务提供商
+      <p>我们有时会雇用其他公司代表我们提供服务，比如处理交易、邮件的处理和寄送、提供用户支持、 托管网站或者针对我们的产品或服务进行统计分析。我们有时需要将您企业/团队和个人的信息与其他公司共享，
+        以便这些公司能够提供适用的服务。我们仅向这些公司提供其向您提供服务所需的信息， 但未授权这些公司将您的信息用于KeyPowerPlus之外的任何其他用途。
+      </p>
+    </div>
+  </div>
+  <% include include/footer.ejs%>
+  </body>
+</html>
