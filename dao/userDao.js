@@ -33,6 +33,7 @@ module.exports = {
             var time = new Date();
             console.log(time);
             connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time], function(err, result) {
+                console.log("sallon")
                 if(result) {
                     result = {
                         code: 200,
