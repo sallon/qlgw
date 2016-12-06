@@ -18,6 +18,7 @@ var jsonWrite = function (res, ret) {
             msg: '操作失败'
         });
     } else {
+        console.log(ret);
         res.json(ret);
     }
 };
@@ -26,10 +27,12 @@ module.exports = {
     add: function (req, res, next) {
         pool.getConnection(function(err, connection) {
             // 获取前台页面传过来的参数
-            var param = req.query || req.params;
+            var param = req.body || req.body;
             // 建立连接，向表中插入值
             // 'INSERT INTO user(id, name, age) VALUES(0,?,?)',
-            connection.query($sql.insert, [param.email, param.pwd], function(err, result) {
+            var time = new Date();
+            console.log(time);
+            connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time], function(err, result) {
                 if(result) {
                     result = {
                         code: 200,
@@ -43,23 +46,11 @@ module.exports = {
             });
         });
     },
-    find: function (req, res, next) {
-        pool.getConnection(function(err, connection) {
-            // 获取前台页面传过来的参数
-            var param = req.query || req.params;
-            connection.query($sql.queryByEmail, [param.email, param.pwd], function(err, result) {
-                // 以json形式，把操作结果返回给前台页面
-                verifyUser(res, result,param.pwd);
-                // 释放连接
-                connection.release();
-            });
-        })
-    },
     findAll: function (req, res, next) {
         pool.getConnection(function(err, connection) {
             // 获取前台页面传过来的参数
             var param = req.query || req.params;
-            connection.query($sql.queryAll, [param.email, param.pwd], function(err, result) {
+            connection.query($sql.queryAll, [param.email, param.companyName, param.userName, param.telphone, param.position, param.description], function(err, result) {
                 // 以json形式，把操作结果返回给前台页面
                 jsonWrite(res, result);
                 // 释放连接
@@ -68,16 +59,3 @@ module.exports = {
         })
     }
 };
-
-var verifyUser = function(res,result,pwd){
-    console.log(result,pwd)
-    if(result.length == 0 || result.length > 1){
-        result = false;
-    }
-    if(result.length  == 1 && result[0].pwd == pwd){
-        result = true;
-    }else{
-        result = false;
-    }
-    res.json(result)
-}

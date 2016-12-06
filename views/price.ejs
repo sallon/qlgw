@@ -31,7 +31,7 @@
           <h2>企业版</h2>
           <p class="pp_h2_info">面对中小团队（限10人以上）</p>
           <div class="pp_num">¥299<span>/人/年</span></div>
-          <a href="about" class="btn btn-lg btn-primary btn-sm">立即购买</a>
+          <a href="javascript:void(0);" onclick="showDialog();" class="btn btn-lg btn-primary btn-sm">立即购买</a>
           <div class="pp_list">
             <p class="pp_i">用户管理</p>
             <p class="pp_i">任务管理</p>
@@ -46,7 +46,7 @@
           <h2>私有部署</h2>
           <p class="pp_h2_info">面对大型组织（100人以上）</p>
           <div class="pp_num">联系我们</div>
-          <a href="about" class="btn btn-lg btn-primary btn-sm">联系客户顾问</a>
+          <a href="javascript:void(0);" onclick="showDialog();"class="btn btn-lg btn-primary btn-sm">联系客户顾问</a>
           <div class="pp_list">
             <p class="pp_i">用户管理</p>
             <p class="pp_i">任务管理</p>
@@ -60,7 +60,123 @@
       </div>
     </div>
   </div>
-  <div class=""></div>
+  <div class="mask" id="formDialog" style="display: none;">
+    <div class="dialog">
+      <div class="d_header">获取详细的企力核心功能<a href="javascript:void(0);" onclick="closeDialog();"><i class="iconfont
+      icon-close"></i></a></div>
+      <div class="d_container">
+        <p class="tips"><i class="iconfont icon-note"></i>填写下表让我们帮助你快速搭建管理平台</p>
+        <form id="information" method="post" action="subinfo">
+          <label class="f_item">
+            <p>公司／机构<em>*</em></p>
+            <input name="companyName" type="text" placeholder="请填写公司或机构名称">
+            <p class="errormsg">请填写公司或机构名称</p>
+          </label>
+          <label class="f_item f_half">
+            <p>姓名<em>*</em></p>
+            <input name="userName" type="text" placeholder="请填写您的姓名">
+            <p class="errormsg">请填写用户姓名</p>
+          </label>
+          <label class="f_item f_half">
+            <p>职务</p>
+            <input name="position" type="text" placeholder="请填写您的职务">
+          </label>
+          <div style="clear: both;overflow: hidden">
+            <label class="f_item f_half">
+              <p>电话<em>*</em></p>
+              <input name="telphone" type="text" placeholder="如果是座机号，请填写区号。">
+              <p class="errormsg">请填写电话号码</p>
+            </label>
+            <label class="f_item f_half">
+              <p>邮箱<em>*</em></p>
+              <input name="email" type="text" placeholder="请填写您的常用邮箱">
+              <p class="errormsg">请填写邮箱</p>
+            </label>
+          </div>
+          <label class="f_item">
+            <p>业务场景描述<em>*</em></p>
+            <textarea name="description"
+                      placeholder="请详细填写此内容，方便我们的同事与您更好的沟通解决，详细的业务场景描述，将优先获得企力工作人员的电话支持服务！"></textarea>
+            <p class="errormsg">请填写业务场景</p>
+          </label>
+        </form>
+      </div>
+      <div class="d_footer">
+        <a class="btn-connect" onclick="submitForm()">联系我们</a>
+      </div>
+    </div>
+  </div>
+  <div class="mask" id="successDialog" style="display: none">
+    <img onclick="closeImg()" class="success" src="images/index/success.png">
+  </div>
   <% include include/footer.ejs%>
+  <script type="text/javascript">
+  function closeDialog(){
+    $("#formDialog").hide();
+  }
+  function showDialog(){
+    $("#formDialog").show();
+  }
+  function submitForm(){
+    var n = $("#information").find("input[name = 'companyName']").val();
+    if(n == null || n == undefined || n==""){
+      $("#information").find("input[name = 'companyName']").parent().find(".errormsg").show();
+      return false;
+    }else{
+      $("#information").find("input[name = 'companyName']").parent().find(".errormsg").hide();
+    }
+    var m = $("#information").find("input[name = 'userName']").val();
+    if(m == null || m == undefined || m==""){
+      $("#information").find("input[name = 'userName']").parent().find(".errormsg").show();
+      return false;
+    }else{
+      $("#information").find("input[name = 'userName']").parent().find(".errormsg").hide();
+    }
+    var l = $("#information").find("input[name = 'telphone']").val();
+    if(l == null || l == undefined || l==""){
+      $("#information").find("input[name = 'telphone']").parent().find(".errormsg").show();
+      return false;
+    }else{
+      $("#information").find("input[name = 'telphone']").parent().find(".errormsg").hide();
+    }
+    var l = $("#information").find("input[name = 'email']").val();
+    if(l == null || l == undefined || l==""){
+      $("#information").find("input[name = 'email']").parent().find(".errormsg").show();
+      return false;
+    }else{
+      $("#information").find("input[name = 'email']").parent().find(".errormsg").hide();
+    }
+    var l = $("#information").find("textarea[name = 'description']").val();
+    if(l == null || l == undefined || l==""){
+      $("#information").find("textarea[name = 'description']").parent().find(".errormsg").show();
+      return false;
+    }else{
+      $("#information").find("textarea[name = 'description']").parent().find(".errormsg").hide();
+    }
+    console.log($("#information").serialize());
+    $.ajax({
+      type:"POST",
+      url:"/subinfo",
+      dataType:"json",
+      data:$("#information").serialize(),
+      success:function(data){
+        if(data.code == 200){
+          closeDialog();
+          showSuccess();
+        }
+      }
+    })
+  }
+  function closeImg(){
+    $("#successDialog").hide();
+  }
+  function showSuccess(){
+    $("#successDialog").show(function(){
+      setTimeout(function(){
+        closeImg();
+      },3000)
+    });
+  }
+  </script>
   </body>
 </html>

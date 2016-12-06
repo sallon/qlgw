@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var userDao = require("../dao/userDao")
 
 /* GET home page. */
 
@@ -35,6 +36,11 @@ router.get('/layer',function(req,res,next){
 })
 router.get('/help',function(req,res,next){
   res.render('help',{title: '企力 | 您手边的办公利器 | 技术支持',isindex:false,flag:""})
+})
+
+router.post('/subinfo',function(req,res,next){
+  userDao.add(req, res,next);
+  // res.send("sallon")
 })
 
 module.exports = router;
