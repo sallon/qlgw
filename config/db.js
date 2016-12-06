@@ -7,7 +7,7 @@ module.exports = {
         host: 'rdsa6brqauzveai.mysql.rds.aliyuncs.com',
         user: 'newlearn',
         password: 'Shiyou123456',
-        database:'keypowerplus_test', 
+        database:'keypowerplus_test',
         port: 3306
     }
     // mysql: {
