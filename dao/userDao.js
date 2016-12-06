@@ -31,9 +31,8 @@ module.exports = {
             // 建立连接，向表中插入值
             // 'INSERT INTO user(id, name, age) VALUES(0,?,?)',
             var time = new Date();
-            console.log(time);
             connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time], function(err, result) {
-                console.log("sallon")
+                console.log(result)
                 if(result) {
                     result = {
                         code: 200,
