@@ -29,10 +29,13 @@ module.exports = {
             // 获取前台页面传过来的参数
             var param = req.body || req.body;
             // 建立连接，向表中插入值
+            // console.log(param)
             // 'INSERT INTO user(id, name, age) VALUES(0,?,?)',
             var time = new Date();
-            connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time], function(err, result) {
-                console.log(result)
+            // id, companyName,userName,telphone,position,description, email,' +
+            // ' createdtime,creator,modifiedtime,modifier,domainid,is_delete
+            connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time,"","","","",""], function(err, result) {
+                console.log(err)
                 if(result) {
                     result = {
                         code: 200,
@@ -50,9 +53,10 @@ module.exports = {
         pool.getConnection(function(err, connection) {
             // 获取前台页面传过来的参数
             var param = req.query || req.params;
-            connection.query($sql.queryAll, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time], function(err, result) {
+            connection.query($sql.queryAll, function(err, result) {
                 // 以json形式，把操作结果返回给前台页面
                 jsonWrite(res, result);
+                console.log(result)
                 // 释放连接
                 connection.release();
             });
