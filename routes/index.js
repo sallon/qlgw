@@ -43,4 +43,9 @@ router.post('/subinfo',function(req,res,next){
   // res.send("sallon")
 })
 
+router.get('/quaryall',function(req,res,next){
+  userDao.findAll(req, res,next);
+  // res.send("sallon")
+})
+
 module.exports = router;
