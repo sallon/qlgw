@@ -34,7 +34,8 @@ module.exports = {
             var time = new Date();
             // id, companyName,userName,telphone,position,description, email,' +
             // ' createdtime,creator,modifiedtime,modifier,domainid,is_delete
-            connection.query($sql.insert, [param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time,"","","","",""], function(err, result) {
+            var id= time.getTime()+parseInt(Math.random()*1000);
+            connection.query($sql.insert, [id,param.companyName, param.userName, param.telphone, param.position, param.description,param.email, time,"",time,"","",""], function(err, result) {
                 console.log(err)
                 if(result) {
                     result = {
