@@ -49,3 +49,4 @@ router.get('/quaryall',function(req,res,next){
 })
 
 module.exports = router;
+
